@@ -1,0 +1,15 @@
+BOO = countries/Boosestan.txt
+BUU = countries/Buubwioland.txt
+COA = countries/Coasreort.txt
+ECH = countries/Echtund.txt
+ENM = countries/Enmustan.txt
+HUS = countries/Chushupp.txt
+IBW = countries/Ibwess.txt
+MOA = countries/Moarduung.txt
+MUE = countries/Muef.txt
+RUI = countries/Ruigeng.txt
+SHI = countries/Shidesturt.txt
+SOO = countries/Sooney.txt
+THA = countries/Thaum.txt
+TRO = countries/Trostrupp.txt
+UCH = countries/Uchtert.txt

@@ -1,0 +1,273 @@
+focus_tree = {
+	id = SHI_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SHI
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 55 y = 1500 }
+	
+		focus = {
+		id = SHI0.4
+		prerequisite = {}
+
+		mutually_exclusive = { }
+		
+		icon = GFX_goal_generic_political_pressure
+		available = {
+			if = { date > 1939.1.1}
+
+			is_subject = no
+		}
+		bypass = {
+			
+			OR = {
+				has_war_with = BUU
+				is_in_faction_with = BUU
+				BUU = { is_subject_of = SHI }
+				BUU = { has_non_aggression_pact_with = SHI }
+			}
+		}
+		cancel_if_invalid = yes
+		x = 3
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			
+			create_wargoal = {
+				type = annex_everything
+				target = BUU
+				expire = 0
+			}
+		}
+	}
+	focus = {
+		id = SHI0.6
+		prerequisite = {}
+
+		mutually_exclusive = { }
+		
+		icon = GFX_goal_generic_political_pressure
+		available = {
+			if = { date > 1939.1.1}
+
+			is_subject = no
+		}
+		bypass = {
+			
+			OR = {
+				has_war_with = TRO
+				is_in_faction_with = TRO
+				TRO = { is_subject_of = SHI }
+				TRO = { has_non_aggression_pact_with = SHI }
+			}
+		}
+		cancel_if_invalid = yes
+		x = 3
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			
+			create_wargoal = {
+				type = annex_everything
+				target = TRO
+				expire = 0
+			}
+		}
+	}
+	focus = {
+		id = SHI1.0
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = {}
+
+		mutually_exclusive = { }
+		
+		x = 5
+		y = 1
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+		available = {
+			if = { date > 1936.1.1}
+
+		}
+		bypass = {
+			
+		}
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SHI = {
+			set_rule = { can_create_factions = yes }
+			create_faction = Shidesturt_Axis
+			}
+		}
+	}
+	focus = {
+		id = SHI1000.0
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = {}
+
+		mutually_exclusive = { }
+		
+		x = 7
+		y = 1
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+		available = {
+			if = { date > 1936.1.1}
+
+		}
+		bypass = {
+			
+		}
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 500
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = SHI1000.1
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SHI1000.0 }
+
+		mutually_exclusive = { focus = SHI1000.2 }
+		
+		x = 7
+		y = 2
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+		available = {
+			if = { date > 1936.1.1}
+
+		}
+		bypass = {
+			
+		}
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 500
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = SHI1000.2
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SHI1000.0 }
+
+		mutually_exclusive = { focus = SHI1000.1 }
+		
+		x = 9
+		y = 2
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+		available = {
+			if = { date > 1936.1.1}
+
+		}
+		bypass = {
+			
+		}
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 500
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = SHI1001.3
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SHI1000.1  focus = SHI1000.2 }
+
+		mutually_exclusive = { }
+		
+		x = 7
+		y = 3
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+		available = {
+			if = { date > 1936.1.1}
+
+		}
+		bypass = {
+			
+		}
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 500
+			
+		}
+	}
+	focus = {
+		id = SHI1002.4
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SHI1000.1  focus = SHI1000.2 }
+
+		mutually_exclusive = { }
+		
+		x = 7
+		y = 4
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+		available = {
+			if = { date > 1936.1.1}
+
+		}
+		bypass = {
+			
+		}
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 500
+			
+		}
+	}
+
+	
+}
